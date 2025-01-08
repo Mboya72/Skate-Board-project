@@ -7,7 +7,7 @@ export function SVGFilters() {
                         <feTurbulence
                             baseFrequency="0.05"
                             id="turbulence"
-                            numOctaves="2"
+                            numOctaves="2 "
                             result="noise"
                             seed={index}
                         ></feTurbulence>
