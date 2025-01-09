@@ -26,8 +26,8 @@ export const Header = async () => {
                     gap-8'>
                         {settings.data.navigation.map(item => (
                             <li key={item.link.text}>
-                            <PrismicNextLink field={item.link}
-                            className='~text-lg/xl'/>
+                                <PrismicNextLink field={item.link}
+                                    className='~text-lg/xl' />
                             </li>))}
                     </ul>
                 </nav>
