@@ -27,10 +27,10 @@ export const SkateboardProduct = async ({ id }: Props) => {
                 </span>
             </div>
             <div className='-mb-1 overflow-hidden py-4'>
-                <PrismicNextImage alt="" field={product.data.image} width={150} 
-                className='mx-auto w-[58%]'/>
+                <PrismicNextImage alt="" field={product.data.image} width={150}
+                    className='mx-auto w-[58%] origin-top transform-gpu 
+                    transition-transform duration-500 ease-in-out group-hover:scale-150'/>
             </div>
-
             <h3 className='my-2 text-center font-sans leading-tight ~text-lg/xl'>
                 {product.data.name}
             </h3>
