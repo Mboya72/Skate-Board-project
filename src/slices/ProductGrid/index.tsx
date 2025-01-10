@@ -25,15 +25,16 @@ const ProductGrid = ({ slice }: ProductGridProps): JSX.Element => {
         <PrismicRichText field={slice.primary.heading} />
       </Heading>
       <div className="text-center ~mb-6/10">
-      <PrismicRichText field={slice.primary.body} />
+        <PrismicRichText field={slice.primary.body} />
       </div>
-      {slice.primary.product.map(({skateboard}) => (
-        // Render the item
-isFilled.contentRelationship(skateboard) && (
-  <SkateboardProduct key={skateboard.id} id={skateboard.id} />
-)
-        
-      ))}
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {slice.primary.product.map(({ skateboard }) => (
+          // Render the item
+          isFilled.contentRelationship(skateboard) && (
+            <SkateboardProduct key={skateboard.id} id={skateboard.id} />
+          )
+        ))}
+      </div>
     </Bounded>
   );
 };
