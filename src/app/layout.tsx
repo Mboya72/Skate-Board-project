@@ -34,10 +34,10 @@ export default function RootLayout({
         className={`${bowlby.variable} ${dmMono.variable} antialiased font-mono font-medium text-zinc-800`}
       >
         <main>
-          <Header/>
-        {children}
+          <Header />
+          {children}
         </main>
-        <SVGFilters/>
+        <SVGFilters />
       </body>
     </html>
   );
