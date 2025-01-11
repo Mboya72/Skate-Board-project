@@ -42,9 +42,7 @@
                   "label": "Skateboard",
                   "select": "document",
                   "repeat": false,
-                  "customtypes": [
-                    "skateboard"
-                  ]
+                  "customtypes": ["skateboard"]
                 }
               }
             }

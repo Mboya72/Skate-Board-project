@@ -1,10 +1,14 @@
 import { Content, isFilled } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import {
+  PrismicRichText,
+  PrismicText,
+  SliceComponentProps,
+} from "@prismicio/react";
 
 import { Bounded } from "@/components/Bounded";
-import { JSX } from "react";
 import { Heading } from "@/components/Heading";
 import { SkateboardProduct } from "./SkateboardProduct";
+import { JSX } from "react";
 
 /**
  * Props for `ProductGrid`.
@@ -22,18 +26,19 @@ const ProductGrid = ({ slice }: ProductGridProps): JSX.Element => {
       className="bg-texture bg-brand-gray"
     >
       <Heading className="text-center ~mb-4/6" as="h2">
-        <PrismicRichText field={slice.primary.heading} />
+        <PrismicText field={slice.primary.heading} />
       </Heading>
+
       <div className="text-center ~mb-6/10">
         <PrismicRichText field={slice.primary.body} />
       </div>
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {slice.primary.product.map(({ skateboard }) => (
-          // Render the item
-          isFilled.contentRelationship(skateboard) && (
-            <SkateboardProduct key={skateboard.id} id={skateboard.id} />
-          )
-        ))}
+        {slice.primary.product.map(
+          ({ skateboard }) =>
+            isFilled.contentRelationship(skateboard) && (
+              <SkateboardProduct key={skateboard.id} id={skateboard.id} />
+            )
+        )}
       </div>
     </Bounded>
   );

@@ -1,25 +1,31 @@
 import type { Config } from "tailwindcss";
-import fluid, { extract, screens, fontSize, FluidThemeConfig } from 'fluid-tailwind'
+import fluid, {
+  extract,
+  screens,
+  fontSize,
+  FluidThemeConfig,
+} from "fluid-tailwind";
 
 export default {
-  content: {files:[
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  extract,
-},
+  content: {
+    files: [
+      "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+      "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    extract,
+  },
   theme: {
     fluid: (({ theme }) => ({
-      defaultScreens: ['20rem', theme('screens.lg')]
+      defaultScreens: ["20rem", theme("screens.lg")],
     })) satisfies FluidThemeConfig,
     screens,
     fontSize,
     extend: {
       fontFamily: {
-        sans: ['var(--font-bowlby-sc)'],
-        mono: ['var(--font-dm-mono)'],
+        sans: ["var(--font-bowlby-sc)"],
+        mono: ["var(--font-dm-mono)"],
       },
       colors: {
         "brand-blue": "#4876ff",
