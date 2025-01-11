@@ -37,7 +37,7 @@ const ProductGrid = ({ slice }: ProductGridProps): JSX.Element => {
           ({ skateboard }) =>
             isFilled.contentRelationship(skateboard) && (
               <SkateboardProduct key={skateboard.id} id={skateboard.id} />
-            )
+            ),
         )}
       </div>
     </Bounded>
