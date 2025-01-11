@@ -67,11 +67,9 @@ export async function SkateboardProduct({ id }: Props) {
         />
       </div>
       <HorizontalLine className={HORIZONTAL_LINE_CLASSES} />
-
       <h3 className="my-2 text-center font-sans leading-tight ~text-lg/xl">
         {product.data.name}
       </h3>
-
       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
         <ButtonLink field={product.data.customizer}>Customize</ButtonLink>
       </div>
