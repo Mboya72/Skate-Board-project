@@ -16,12 +16,15 @@ export const ParallaxImage = ({
 }: Props) => {
   return (
     <div className={clsx("grid grid-cols-1 place-items-center", className)}>
-        <div className="col-start-1 row-start-1 transition-transform">
-      <PrismicNextImage field={backgroundImage} />
-        </div>
-        <div className="col-start-1 row-start-1 transition-transform">
-      <PrismicNextImage field={foregroundImage} />
-        </div>
+      <div className="col-start-1 row-start-1 transition-transform">
+        <PrismicNextImage field={backgroundImage} alt="" />
+      </div>
+      <div
+        className="col-start-1 row-start-1 transition-transform 
+        h-full w-full place-items-center"
+      >
+        <PrismicNextImage field={foregroundImage} alt="" />
+      </div>
     </div>
   );
 };
